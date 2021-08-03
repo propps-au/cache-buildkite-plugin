@@ -82,6 +82,7 @@ steps:
           bucket: "s3-bucket"
           class: STANDARD # Optional. Defaults to empty which is usually STANDARD or based on policy.
           args: '--option 1' # Optional. Defaults to empty. Any optional argument that can be passed to aws s3 cp command.
+          global: false # Optional. Defaults to false. Setting this to true removes the pipeline slug from the path where your cache entry is stored, allowing it to be shared between different pipelines
         paths:
           - 'bundle/vendor'
 ```

@@ -32,6 +32,8 @@ configuration:
         type: string
       args:
         type: string
+      global:
+        type: boolean
     tarball:
       path:
         type: string
