@@ -122,6 +122,9 @@ function cache() {
     TAR_TARGETS="${paths[@]}"
   fi
 
+  # Force expand globs
+  TAR_TARGETS=$(eval echo $TAR_TARGETS)
+
   cache_locating "${TAR_TARGETS}"
   TAR_FILE="${CACHE_KEY}.${BK_TAR_EXTENSION}"
   if [ ! -f "$TAR_FILE" ]; then
