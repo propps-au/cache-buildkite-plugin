@@ -1,3 +1,8 @@
+# v2.5.0
+
++ Add `global` cache option for s3 backend to share cache artifacts between pipelines.
++ Fix issue where globs were not expanded properly in s3 backend.
+
 # v2.4.8
 
 + Using `{{ git.branch }}` cache-key with a `/` in the branch name. See #26.
